@@ -1,9 +1,11 @@
 class Particle {
-  constructor (x,y,z,size) {
+  constructor (x,y,z,size, theta) {
     this.x = x;
     this.y = y;
     this.z = z
     this.size = size;
+    this.r = 100;
+    this.theta = theta;
   }
 
   draw () {
@@ -15,6 +17,8 @@ class Particle {
   }
 
   move () {
-    
+    this.y = this.r*sin(this.theta);
+    this.z = this.r*cos(this.theta);
+    this.theta+=0.05;
   }
 }

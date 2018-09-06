@@ -1,5 +1,5 @@
 class Ring {
-  constructor () {
-
+  constructor (array) {
+    this.array = array;
   }
 }
