@@ -6,13 +6,13 @@ class Particle {
     this.y = 0;
     this.z = 0;
     this.size = size;
-    this.r = 100;
+    this.r = 150;
     this.theta = theta;
   }
 
   draw () {
     push();
-      fill(255);
+      fill(255, 255, 255, 255);
       translate(this.x,this.y,this.z);
       sphere(this.size);
     pop();
@@ -20,7 +20,7 @@ class Particle {
 
   move () {
     this.y = this.r*sin(this.theta);
-    this.z = this.r*cos(this.theta) + this.cz;
+    this.x = this.r*cos(this.theta);
     this.theta+=0.02;
   }
 }
