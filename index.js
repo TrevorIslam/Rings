@@ -10,7 +10,7 @@ function setup () {
     for (let theta = 0; theta <=2*PI; theta+=PI/16) {
       let x = 300 * cos(theta);
       let z = 300 * sin(theta);
-      rings.push(new Ring(x,z, 250, theta));
+      rings.push(new Ring(x,z, theta));
     }
 
     camera(0, -300, (height/2.0) / tan(PI*30.0 / 180.0) - 200, 0, 0, 0, 0, 1, 0);
@@ -32,13 +32,11 @@ function draw () {
 function keyPressed() {
   if (keyCode == "A".charCodeAt(0)) {
     rotateAngle+=PI/6;
-    console.log(rotateAngle);
   }
 }
 
 function keyPressed() {
   if (keyCode == "S".charCodeAt(0)) {
     rotateAngle-=PI/6;
-    console.log(rotateAngle);
   }
 }
