@@ -10,7 +10,7 @@ class Ring {
 
   init () {
     for (let i =0;i<=PI;i+=PI/10) {
-        this.particles.push(new Particle(this.cx,0,this.cz,8, i- this.angle*2, this.cz, -this.angle, this.cx));
+        this.particles.push(new Particle(this.cx,0,this.cz,8, i- this.angle*2, this.cz, this.angle, this.cx));
     }
   }
 

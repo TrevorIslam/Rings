@@ -14,14 +14,11 @@ class Particle {
   }
 
   draw () {
-    let offset = this.globalZ + (this.r * sin(this.ringAngle));
+    let offset = this.globalZ + (this.r * sin(this.theta)*sin(this.ringAngle));
     push();
       let alpha = ((offset + this.r + 300)/900)*255;
       fill(255, 255, 255, alpha);
-      if(alpha >200) {
-      console.log(alpha);
 
-      }
       translate(this.x,this.y,this.z);
       sphere(this.size);
     pop();

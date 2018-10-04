@@ -19,8 +19,9 @@ function setup () {
 function draw () {
   orbitControl();
   background(0);
-  push();
+  fill(255,0,0);
 
+  push();
     translate(0,600,-500);
     rotateX(rotateAngle);
     for (let i of rings) {
