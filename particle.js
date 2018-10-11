@@ -17,10 +17,10 @@ class Particle {
     let offset = this.globalZ + (this.r * sin(this.theta)*sin(this.ringAngle));
     push();
       let alpha = ((offset + this.r + 300)/900)*255;
-      fill(255, 255, 255, alpha);
+      fill(220, 245, 255, alpha);
 
       translate(this.x,this.y,this.z);
-      sphere(this.size);
+      sphere(abs(9*cos(this.theta/2))+4);
     pop();
   }
 
