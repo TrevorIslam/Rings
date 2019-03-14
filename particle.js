@@ -11,17 +11,22 @@ class Particle {
     this.globalZ = globalZ;
     this.ringAngle = ringAngle;
     this.ringRadius = ringRadius;
+    this.t=0;
   }
 
   draw () {
+
     let offset = this.globalZ + (this.r * sin(this.theta)*sin(this.ringAngle));
     push();
       let alpha = ((offset + this.r + 300)/900)*255;
-      fill(220, 245, 255, alpha);
+      colorMode(HSB, 100);
+      fill( ((this.ringAngle + this.t*5) % (2*PI)) / (2*PI)*100,100,100,alpha);
+      colorMode(RGB, 255);
 
       translate(this.x,this.y,this.z);
       sphere(abs(9*cos(this.theta/2))+4);
     pop();
+    this.t+=0.01;
   }
 
   move () {

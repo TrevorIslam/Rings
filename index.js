@@ -5,7 +5,8 @@ var num = 10;
 var rotateAngle = 0;
 
 function setup () {
-  createCanvas(500,500,WEBGL);
+  let cv = createCanvas(500,500,WEBGL);
+  cv.parent("myCanvas");
   normalMaterial();
     for (let theta = 0; theta <=2*PI; theta+=PI/16) {
       let x = 300 * cos(theta);
